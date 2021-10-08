@@ -11,7 +11,7 @@
             <div id="home">
                 <div class="search-area">
                     <div class="search-container">
-                        <h1>DesignStorm Update</h1>
+                        <h1>DesignStorm</h1>
                         <input class="search" type="text" value="" placeholder="Search">
                     </div>
                 </div>

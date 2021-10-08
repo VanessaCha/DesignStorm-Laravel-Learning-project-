@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route; 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,28 +16,16 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages/home');
-});
+// Route::get('/','PageController@index');
+// Route::get('/results','PageController@results');
+// Route::get('/dashboard','AccountController@index');
 
-Route::get('/login', function () {
-    return view('pages/login');
-});
-
-Route::get('/register', function () {
-    return view('pages/register');
-});
-
-Route::get('/results', function () {
-    return view('pages/results');
-});
-
-Route::get('/dashboard', function () {
-    return view('admin/dashboard');
-});
+Route::resource('/', PageController::class);
+Route::resource('/results', PageController::class);
+Route::resource('/dashboard', AccountController::class);
 
 Auth::routes();
 
 
-Route::resource('home', HomeController::class);
+
 

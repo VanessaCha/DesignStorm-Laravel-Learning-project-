@@ -1,20 +1,24 @@
-@extends('layouts.app')
+@extends('layouts.main')
+
+<!-- section is one section -->
+@section('title') 
+    Design Strom - Inspiration for Developers
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+  <div id="site-section">
+    <div class="container">
+      <div id="auth">
+        <div class="row">
+          <div class="col-md-offset-4 col-md-4">
+            <div class="box">
+            <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -28,7 +32,7 @@
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -65,43 +69,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
-
-
-@extends('layouts.main')
-
-<!-- section is one section -->
-@section('title') 
-    Design Strom - Inspiration for Developers
-@endsection
-
-@section('content')
-  <div id="site-section">
-    <div class="container">
-      <div id="auth">
-        <div class="row">
-          <div class="col-md-offset-4 col-md-4">
-            <div class="box">
-              <form action="" method="POST">
-                <label for="email">email:</label>
-                <input type="text" name="email">
-                <label for="password">password:</label>
-                <input type="password" name="password">
-                <label for="password2">confirm:</label>
-                <input type="password" name="password2">
-                <div class="row" style="margin:0;">
-                  <div class="col-md-12">
-                    <center>
-                      <button class="main-btn" type="submit">Register</button>
-                    </center>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </div>

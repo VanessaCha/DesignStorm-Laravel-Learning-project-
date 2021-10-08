@@ -1,6 +1,5 @@
 @extends('layouts.main')
 
-<!-- section is one section -->
 @section('title') 
     Design Strom - Inspiration for Developers
 @endsection
