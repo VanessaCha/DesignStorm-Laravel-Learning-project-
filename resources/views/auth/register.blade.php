@@ -7,15 +7,15 @@
 
 @section('content')
   <div id="site-section">
-    <div class="container">
+    <div class="container mt-5 mx-auto" style="width: 200px;">
       <div id="auth">
-        <div class="row">
-          <div class="col-md-offset-4 col-md-4">
+        <div class="row mx-auto border border-dark bg-warning" style="width: 300px;">
+          <div class="">
             <div class="box">
                 <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                     @csrf
                     <div class="row{{ $errors->has('name') ? ' has-error' : '' }}">
-                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}                           
+                        <label for="name" class="col-md-6 col-form-label text-md-right">{{ __('Name') }}                           
                         </label>
                         <div class="col-md-12">
                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -61,9 +61,9 @@
                         </div>
                     </div>
 
-                    <div class="form-group row mb-0">
-                        <div class="col-md-12 offset-md-3">
-                            <button type="submit" class="btn btn-primary">
+                    <div class="form-group row mt-2 mb-2">
+                        <div class="col-md-12 offset-md-6">
+                            <button type="submit" class="btn btn-dark">
                                 {{ __('Register') }}
                             </button>
                         </div>

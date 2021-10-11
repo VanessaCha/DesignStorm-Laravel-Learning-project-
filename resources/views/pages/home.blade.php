@@ -41,13 +41,13 @@
 @endsection
 
 @section('content')
-            <div class="container pl-5 mx-auto" style="width: 200px;">
+            <div class="container mt-5 mx-auto" style="width: 200px;">
                 <div class="column">
                     <h1>DesignStorm</h1>
                     <div id="home">
                         <div class="search-area">
                             <div class="search-container"> 
-                                <input class="search" type="text" value="" placeholder="Search">
+                                <input class="search bg-warning" style="width: 210px;" type="text" value="" placeholder="Search">
                             </div>
                         </div>
                     </div>
@@ -57,11 +57,20 @@
 @endsection
 
 @section('button')
-    <div class="container border border-primary mt-5">
+    <div class="container border border-dark mt-5">
     <div class="row">
-        <div class="col-12 border border-secondary bg-dark text-light">.col-9</div>
-        <div class="col-6 border border-sucess bg-warning text-dark">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-        <div class="col-6 border border-info bg-warning text-dark">.col-6<br>Subsequent columns continue along the new line.</div>
+        <div class="col-md-12 border border-dark bg-light text-dark">.col-9</div>
+        <div class="col-md-6 border border-dark bg-warning text-dark">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+        <div class="col-md-6 border border-dark bg-warning text-dark">.col-6<br>Subsequent columns continue along the new line.</div>
     </div>
     </div>
+
+    <div class="container border border-dark mt-5">
+    <div class="row">
+        <div class="col-12 border border-dark bg-light text-dark">.col-9</div>
+        <div class="col-6 border border-dark bg-warning text-dark">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+        <div class="col-6 border border-dark bg-warning text-dark">.col-6<br>Subsequent columns continue along the new line.</div>
+    </div>
+    </div>
+
 @endsection
