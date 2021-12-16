@@ -1,0 +1,74 @@
+body{
+    background: #FFF0F5 !important;
+}
+
+.header{
+    background:#FFF;
+    border-bottom: 0.5px solid black;
+    /* background:#FF7F50; */
+    /* background: linear-gradient(180deg, #FF7F50 0%, rgb(209, 112, 33) 35%, rgb(153, 91, 9) 100%); */
+}
+.text-color-1{
+    font-family: Impact, fantasy;
+    letter-spacing: 2px;
+    color:black;
+    text-decoration: mintcream !important;
+    padding-left: 10px;
+}
+
+.text-color-1:hover{
+    color:rgb(27, 71, 49);
+}
+
+.text-color-2{
+    font-family: Impact, fantasy !important;
+    letter-spacing: 2px !important;
+    color:black !important;
+    text-decoration: mintcream !important;
+}
+
+.text-color-3{
+    font-family: Impact, fantasy;
+    letter-spacing: 2px;
+    color:rgb(31, 57, 173);
+    text-decoration: mintcream !important;
+    font-size: x-large;
+}
+
+.color-1{
+    color:black !important;
+}
+
+.navbar{
+    padding-top: .9rem !important;
+    padding-bottom: .9rem !important;
+}
+
+.background-1{
+    background:#FFFFFF;
+    border: 1px solid black;
+}
+.background-2{
+    background:#FFFFFF;
+    border-top:  1px solid black;
+    border-left:  1px solid black;
+    border-right:  1px solid black;
+}
+
+.text-position-end{
+    text-align: end !important;
+}
+
+.text-position-start{
+    text-align: start !important;
+}
+
+.btn-color{
+    background-color:  rgb(66, 65, 65) !important;
+    color: #FFF !important;
+}
+
+.btn-color:hover{
+    background-color: #000 !important;
+    color: #FFF !important;
+}

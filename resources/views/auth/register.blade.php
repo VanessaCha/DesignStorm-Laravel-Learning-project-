@@ -61,8 +61,8 @@
                         </div>
                     </div>
 
-                    <div class="form-group row mt-2 mb-2">
-                        <div class="col-md-12 offset-md-6">
+                    <div class="form-group row mt-3 mb-2">
+                        <div class="col-md-12 offset-md">
                             <button type="submit" class="btn btn-dark">
                                 {{ __('Register') }}
                             </button>

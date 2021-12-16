@@ -1,76 +1,58 @@
 @extends('layouts.main')
 
-<!-- section is one section -->
-@section('title') 
-    Design Storm - Inspiration for Developers
-@endsection
-
-@section('navbar')
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Design Storm</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        @guest
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="register">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login">Login</a>
-        @else
-          <a href="/dashboard">{{auth()->user()->name}}</a>
-          <a class="dropdown-item" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-          </a>
-
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-            @csrf
-          </form>
-          </li>
-        </ul>
-        @endguest
-    </div>
-  </div>
-</nav>
+@section('title')
 
 @endsection
 
 @section('content')
-            <div class="container mt-5 mx-auto" style="width: 200px;">
-                <div class="column">
-                    <h1>DesignStorm</h1>
-                    <div id="home">
-                        <div class="search-area">
-                            <div class="search-container"> 
-                                <input class="search bg-warning" style="width: 210px;" type="text" value="" placeholder="Search">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div>
+    <div class="container pt-5">
+        <div class="row background-2">
+            <div class="col-12 text-color-1 text-center">
+                <h1>COME JOIN US !</h1>
+            </div>  
+        </div>
+        <div class="row background-1">
+            <div class="col-12 m-auto pt-2 pb-2">
+                <img src="{{asset('image/pic_1.jpg')}}" class="rounded mx-auto d-block" style="max-width: 600px"/>
             </div>
-
-@endsection
-
-@section('button')
-    <div class="container border border-dark mt-5">
-    <div class="row">
-        <div class="col-md-12 border border-dark bg-light text-dark">.col-9</div>
-        <div class="col-md-6 border border-dark bg-warning text-dark">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-        <div class="col-md-6 border border-dark bg-warning text-dark">.col-6<br>Subsequent columns continue along the new line.</div>
-    </div>
+            <div class="col-12 text-center">
+                <p>Keeping up with Asian fashion, beauty and lifestyle trends can be quite dazzling, but these Malaysian bloggers have managed to successfully set their own pace and styles. They provide insights into life in urban Malaysia, tips for travelling the world in style, share advice for what works for Asian skin types, and develop new looks for tropical weather. Here are 10 Malaysian fashion bloggers you need to follow.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="container border border-dark mt-5">
-    <div class="row">
-        <div class="col-12 border border-dark bg-light text-dark">.col-9</div>
-        <div class="col-6 border border-dark bg-warning text-dark">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-        <div class="col-6 border border-dark bg-warning text-dark">.col-6<br>Subsequent columns continue along the new line.</div>
+    <div class="container pt-5">
+        <div class="row background-2">
+            <div class="col-12 text-color-1 text-center">
+                <h1><a class="text-color-1" href="/register">REGISTER</a> NOW !</h1>
+            </div>  
+        </div>
+        <div class="row background-1">
+            <div class="col-12 m-auto pt-2 pb-2">
+                <img src="{{asset('image/pic_2.jpg')}}" class="rounded mx-auto d-block" style="max-width: 600px"/>
+            </div>
+            <div class="col-12 text-center">
+                <p>Fashion is a highly visual industry, which explains why Instagram is the social network of choice for lovers of style. But there is far more fashion content online than what people share on social media. It has always been a strong niche for blogging.</p>
+            </div>
+        </div>
     </div>
+
+    <div class="container pt-5">
+        <div class="row background-2">
+            <div class="col-12 text-color-1 text-center">
+                <h1>FOLLOW US NOW !</h1>
+            </div>  
+        </div>
+        <div class="row background-1">
+            <div class="col-12 m-auto pt-2 pb-2">
+                <img src="{{asset('image/pic_3.png')}}" class="rounded mx-auto d-block" style="max-width: 600px"/>
+            </div>
+            <div class="col-12 text-center">
+                <p>There are many quality fashion blogs, which unsurprisingly feature high-quality photographs of the latest fashion innovations.  Most fashion blogs are full of inspiration for those mornings you open your wardrobe door with your mind in a blank. They make an ideal place to begin your online research into what’s hot this year before you head off to purchase your own outfits. They can also provide you with ideas about what you can mix and match to create that perfect look.</p>
+            </div>
+        </div>
     </div>
+</div>
 
 @endsection

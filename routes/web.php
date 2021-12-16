@@ -21,8 +21,16 @@ use App\Http\Controllers\AccountController;
 // Route::get('/dashboard','AccountController@index');
 
 Route::resource('/', PageController::class);
-Route::resource('/results', PageController::class);
+// Route::resource('/results', PageController::class);
 Route::resource('/dashboard', AccountController::class);
+
+Route::get('/contact', function () {
+    return view('pages/contact');
+});
+
+Route::get('/results', function () {
+    return view('pages/results');
+});
 
 Auth::routes();
 
